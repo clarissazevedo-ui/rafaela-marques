@@ -548,6 +548,80 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
   }
 }
 
+
+
+/* AJUSTE FINAL - POSICIONAMENTO DA LOGO CONEXA E TITULO DA CONSULTORIA 3 */
+@media (max-width: 860px) {
+  /* Consultoria 1: mantém a logo na mesma faixa do título, à direita,
+     dentro do cabeçalho e acima da linha divisória. */
+  #servicos #oferta-conexa .oferta-head {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 64px;
+    grid-template-rows: auto;
+    align-items: start;
+    column-gap: 8px;
+    row-gap: 0;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  #servicos #oferta-conexa .oferta-num {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  #servicos #oferta-conexa .oferta-title {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    width: 64px;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    margin: 2px 0 0;
+    overflow: hidden;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap img {
+    display: block;
+    width: 64px;
+    max-width: 64px;
+    max-height: 44px;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  /* Consultoria 3: deixa o título inteiro dentro do cabeçalho,
+     acima da linha divisória, sem deslocamento ou sobreposição. */
+  #servicos #oferta-inteligencia .oferta-head {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 10px;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+    position: static;
+  }
+  #servicos #oferta-inteligencia .oferta-head > div:last-child {
+    min-width: 0;
+  }
+  #servicos #oferta-inteligencia .oferta-head h3 {
+    position: static;
+    top: auto;
+    margin: 2px 0 0;
+    font-size: clamp(1.08rem, 4.5vw, 1.22rem);
+    line-height: 1.16;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+  }
+}
+
 </style>
 </head>
 <body>
