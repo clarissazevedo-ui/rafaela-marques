@@ -407,6 +407,73 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
   }
 }
 
+
+
+/* AJUSTES FINOS - CONSULTORIAS NO CELULAR */
+@media (max-width: 860px) {
+  /* CONEXA: mantém a marca junto ao cabeçalho da primeira consultoria,
+     sem deixá-la solta abaixo do título ou fixa durante a rolagem. */
+  #servicos #oferta-conexa .oferta-head {
+    position: static;
+    top: auto;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) 88px;
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 0;
+  }
+  #servicos #oferta-conexa .oferta-num {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #servicos #oferta-conexa .oferta-title {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    width: 88px;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap img {
+    display: block;
+    width: 100%;
+    max-width: 88px;
+    max-height: 52px;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  /* Consultoria 3: o cabeçalho acompanha o fluxo normal da página e
+     mantém uma distância clara antes do início do texto. */
+  #servicos #oferta-inteligencia .oferta-head {
+    position: static;
+    top: auto;
+    z-index: auto;
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    align-items: flex-start;
+  }
+  #servicos #oferta-inteligencia .oferta-head h3 {
+    position: static;
+    margin-top: 6px;
+  }
+  #servicos #oferta-inteligencia .oferta-corpo {
+    padding-top: 8px;
+  }
+  #servicos #oferta-inteligencia .oferta-texto {
+    padding-top: 4px;
+  }
+}
+
 </style>
 </head>
 <body>
