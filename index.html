@@ -486,6 +486,68 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
   }
 }
 
+
+/* AJUSTE VISUAL FINAL - CABEÇALHOS DAS CONSULTORIAS NO CELULAR */
+@media (max-width: 860px) {
+  /* CONEXA: título e logomarca ficam juntos dentro do cabeçalho,
+     ambos acima da linha divisória, sem comprimir o título. */
+  #servicos #oferta-conexa .oferta-head {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 8px;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  #servicos #oferta-conexa .oferta-num {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  #servicos #oferta-conexa .oferta-title {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    width: 96px;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    overflow: visible;
+  }
+  #servicos #oferta-conexa .conexa-logo-wrap img {
+    display: block;
+    width: 96px;
+    max-width: 96px;
+    max-height: 48px;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  /* Consultoria 3: eleva discretamente o título em relação à linha,
+     mantendo o cabeçalho no fluxo normal da página. */
+  #servicos #oferta-inteligencia .oferta-head {
+    position: static;
+    top: auto;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+  #servicos #oferta-inteligencia .oferta-head h3 {
+    position: relative;
+    top: -4px;
+    margin-top: 0;
+  }
+}
+
 </style>
 </head>
 <body>
