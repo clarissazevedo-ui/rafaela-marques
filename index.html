@@ -64,9 +64,9 @@ nav a:hover{color:var(--primaria);}
 @keyframes pulse{from{transform:translateY(-50%) scale(1);} to{transform:translateY(-50%) scale(1.04);}}
 .hero-text{position:relative; z-index:1;}
 .pill{display:inline-block; padding:8px 18px; border-radius:999px; background:var(--superficie); margin-bottom:20px;}
-.hero h1{font-size:clamp(2.6rem,5vw,4.25rem); margin-bottom:20px;}
+.hero h1{font-size:clamp(1.9rem,2.8vw,2.3rem); margin-bottom:18px;}
 .hero h1 em{color:var(--primaria); font-style:italic;}
-.hero p.sub{font-size:1.2rem; color:var(--texto-sec); max-width:34rem; margin-bottom:32px;}
+.hero p.sub{font-size:1.05rem; line-height:1.65; color:var(--texto-sec); max-width:40rem; margin-bottom:28px;}
  .hero-assinatura{font-family:inherit; font-size:1.15rem; font-style:italic; color:var(--primaria); border-left:3px solid var(--secundaria); padding-left:14px; margin:-12px 0 32px;}
  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:28px;}
 .tags{font-size:0.85rem; color:var(--texto-sec);}
@@ -74,7 +74,9 @@ nav a:hover{color:var(--primaria);}
 .hero-photo{width:100%; height:600px; object-fit:cover; border-radius:320px 320px 24px 24px; outline:1px solid var(--secundaria); outline-offset:14px; filter:saturate(1);}
 .hero-semicircle{position:absolute; bottom:-1px; left:0; right:0; height:120px; background:linear-gradient(90deg, var(--acento), var(--secundaria), var(--primaria)); border-radius:50% 50% 0 0 / 100% 100% 0 0; z-index:2; opacity:0.9;}
 @media(max-width:860px){
-  .hero{min-height:auto; padding-top:48px;}
+  .hero{min-height:auto; padding-top:40px; padding-bottom:48px;}
+  .hero h1{font-size:clamp(2rem,7vw,2.65rem);}
+  .hero p.sub{font-size:1rem; line-height:1.6;}
   .hero-grid{grid-template-columns:1fr;}
   .hero-photo{height:420px; order:-1}
   .hero-sun{right:50%; transform:translate(50%,-50%);}
@@ -192,7 +194,7 @@ h2{font-size:clamp(2rem,3vw,2.75rem); margin-bottom:16px;}
 .sun-half{position:absolute; top:-100px; left:50%; transform:translateX(-50%); width:800px; height:400px; border-radius:50%; background:radial-gradient(circle,var(--acento),var(--secundaria),var(--primaria)); opacity:0.25; z-index:0;}
 .destaque-grid{position:relative; z-index:1;}
 /* como funciona */
-.passos{display:grid; grid-template-columns:repeat(3,1fr); gap:32px; position:relative;}
+.passos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; position:relative;}
 @media(max-width:860px){.passos{grid-template-columns:1fr;}}
 .passo{position:relative; padding-left:0;}
 .passo-num{font-family:'Fraunces',serif; font-size:5rem; background:linear-gradient(90deg,var(--secundaria),var(--primaria)); -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;}
@@ -267,13 +269,13 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
 
 #sobre{padding-bottom:52px;}
 #experiencia{padding-top:52px;}
-.sobre-grid{grid-template-columns:minmax(280px,0.88fr) minmax(0,1.12fr); gap:48px; align-items:start;}
-.sobre-foto{height:500px; object-fit:cover; object-position:center top; border-radius:22px;}
-.sobre-texto{padding-top:4px;}
-.sobre-texto p{line-height:1.68; margin-bottom:13px;}
+.sobre-grid{grid-template-columns:1fr; gap:32px; align-items:start;}
+.sobre-foto{width:min(100%,500px); height:500px; margin:0 auto; object-fit:cover; object-position:center top; border-radius:22px;}
+.sobre-texto{width:100%; padding-top:4px;}
+.sobre-texto p{max-width:90ch; line-height:1.68; margin-bottom:13px;}
 @media(max-width:860px){
   .sobre-grid{grid-template-columns:1fr; gap:28px;}
-  .sobre-foto{height:auto; max-height:460px; aspect-ratio:4/3; object-position:center 35%;}
+  .sobre-foto{width:min(100%,460px); height:auto; max-height:460px; aspect-ratio:4/3; object-position:center 35%;}
   #sobre{padding-bottom:40px;}
   #experiencia{padding-top:40px;}
 }
@@ -648,15 +650,12 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
   <div class="hero-sun"></div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="pill eyebrow">Consultorias e Palestras</span>
-      <h1>Conexões que geram <em>valor</em></h1>
-      <p class="sub">Há mais de 20 anos conectando pessoas, organizações e comunidades. Consultorias e Palestras que unem sensibilidade humana, visão estratégica e capacidade de realização para fortalecer relações, construir confiança e transformar diálogo em resultados.</p>
-      <p class="hero-assinatura"><strong>Porque toda interação importa.</strong></p>
+      <h1>Conexões que geram valor</h1>
+      <p class="sub">Há mais de 20 anos, conectando pessoas, organizações e comunidades. Acredito na força das relações para transformar realidades e gerar resultados. Por meio de consultorias e palestras, uno sensibilidade humana, visão estratégica e capacidade de realização. Tudo isso com um toque de arte e expressão, que o teatro traz para a minha forma de comunicar, sentir e me conectar com as pessoas. Porque boas conexões abrem caminhos e transformam diálogos em oportunidades de valor.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/5527992025202?text=Ol%C3%A1%2C%20Rafaela!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20suas%20consultorias%20e%20palestras." target="_blank" rel="noopener" class="btn btn-primario"><i data-lucide="message-circle"></i>Fale comigo pelo WhatsApp</a>
         <a href="#sobre" class="btn btn-secundario"><i data-lucide="arrow-down-right"></i>Conhecer minha trajetória</a>
       </div>
-      <div class="tags">Consultorias · Palestras · Método CONEXA</div>
     </div>
     <div class="hero-photo-wrap">
       <img class="hero-photo" src="rafaela1.jpg" alt="Rafaela Marques de Castro, consultora e palestrante, em retrato com luz dourada de fim de tarde">
@@ -669,7 +668,7 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
   <div class="container">
     <div class="section-head center fade-up">
       <span class="eyebrow">Por que Rafaela</span>
-      <h2>O que diferencia suas palestras</h2>
+      <h2>Um jeito próprio de olhar, conectar e realizar.</h2>
     </div>
     <div class="dif-intro fade-up">
       <p class="dif-destaque"><strong>O olhar humano para compreender. A visão estratégica para conectar. A capacidade de realização para gerar valor.</strong></p>
@@ -677,12 +676,12 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
       <p>Minha atuação é marcada pela combinação entre sensibilidade humana, curiosidade, visão estratégica e capacidade de realização. Acredito que compreender as pessoas e os contextos é o primeiro passo para identificar oportunidades, construir soluções e gerar valor de forma consistente.</p>
     </div>
     <div class="grid-3">
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="search"></i></div><h3>Curiosidade e interesse genuíno pelas pessoas</h3><p>Tenho interesse em conhecer histórias, compreender diferenças, investigar perspectivas e enxergar além do que está evidente. Busco entender o que realmente importa para cada pessoa, comunidade ou organização, reconhecendo que diferentes olhares podem revelar oportunidades que ainda não foram percebidas.</p></div>
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="waypoints"></i></div><h3>Capacidade de conectar diferentes perspectivas</h3><p>Transito entre realidades, interesses e objetivos distintos, construindo pontes entre pessoas, instituições, comunidades e organizações. Meu olhar busca identificar pontos de aproximação, compreender expectativas e encontrar caminhos possíveis, mesmo em contextos complexos.</p></div>
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="target"></i></div><h3>Visão estratégica e geração de valor</h3><p>Não vejo o relacionamento como um fim em si mesmo, mas como um meio para construir confiança, fortalecer vínculos, antecipar oportunidades e alcançar objetivos. Procuro compreender o que representa valor para cada parte e como essas expectativas podem se traduzir em benefícios e resultados compartilhados.</p></div>
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="heart-handshake"></i></div><h3>Sensibilidade humana aliada à gestão e à análise</h3><p>Valorizo a escuta ativa, o respeito, a clareza na comunicação e a qualidade das interações, sem perder de vista a importância do planejamento, dos processos, dos indicadores e do monitoramento. Acredito que boas relações precisam de intenção, método, acompanhamento e capacidade de realização.</p></div>
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="network"></i></div><h3>Olhar integrado e capacidade de articulação</h3><p>Minha experiência me ensinou a olhar para os desafios de forma abrangente, conectando pessoas, áreas, conhecimentos e recursos. Gosto de aproximar diferentes competências para construir soluções que considerem tanto as necessidades humanas quanto os objetivos estratégicos das organizações.</p></div>
-      <div class="card fade-up"><div class="icon-box"><i data-lucide="sprout"></i></div><h3>Construção de relações sustentáveis</h3><p>Acredito em relações que vão além de resultados imediatos. Relações capazes de gerar confiança, reciprocidade, desenvolvimento e valor ao longo do tempo, contribuindo para o sucesso das organizações e para o fortalecimento das pessoas e comunidades com as quais se relacionam.</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="search"></i></div><h3>Curiosidade e interesse genuíno pelas pessoas</h3><p>“Tenho interesse em conhecer histórias, compreender diferenças, investigar perspectivas e enxergar além do que está evidente. Busco entender o que realmente importa para cada pessoa, comunidade ou organização, reconhecendo que diferentes olhares podem revelar oportunidades que ainda não foram percebidas.”</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="waypoints"></i></div><h3>Capacidade de conectar diferentes perspectivas</h3><p>“Transito entre realidades, interesses e objetivos distintos, construindo pontes entre pessoas, instituições, comunidades e organizações. Meu olhar busca identificar pontos de aproximação, compreender expectativas e encontrar caminhos possíveis, mesmo em contextos complexos.”</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="target"></i></div><h3>Visão estratégica e geração de valor</h3><p>“Não vejo o relacionamento como um fim em si mesmo, mas como um meio para construir confiança, fortalecer vínculos, antecipar oportunidades e alcançar objetivos. Procuro compreender o que representa valor para cada parte e como essas expectativas podem se traduzir em benefícios e resultados compartilhados.”</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="heart-handshake"></i></div><h3>Sensibilidade humana aliada à gestão e à análise</h3><p>“Valorizo a escuta ativa, o respeito, a clareza na comunicação e a qualidade das interações, sem perder de vista a importância do planejamento, dos processos, dos indicadores e do monitoramento. Acredito que boas relações precisam de intenção, método, acompanhamento e capacidade de realização.”</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="network"></i></div><h3>Olhar integrado e capacidade de articulação</h3><p>“Minha experiência me ensinou a olhar para os desafios de forma abrangente, conectando pessoas, áreas, conhecimentos e recursos. Gosto de aproximar diferentes competências para construir soluções que considerem tanto as necessidades humanas quanto os objetivos estratégicos das organizações.”</p></div>
+      <div class="card fade-up"><div class="icon-box"><i data-lucide="sprout"></i></div><h3>Construção de relações sustentáveis</h3><p>“Acredito em relações que vão além de resultados imediatos. Relações capazes de gerar confiança, reciprocidade, desenvolvimento e valor ao longo do tempo, contribuindo para o sucesso das organizações e para o fortalecimento das pessoas e comunidades com as quais se relacionam.”</p></div>
     </div>
   </div>
 </section>
@@ -720,50 +719,25 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
 <section class="experiencia" id="experiencia">
   <div class="container">
     <div class="section-head fade-up experiencia-intro">
-      <span class="eyebrow">Trajetória profissional</span>
       <h2>Experiência Profissional</h2>
-      <p>Uma trajetória construída na conexão entre relacionamento institucional, desenvolvimento territorial, gestão de operações, pessoas, processos e tecnologia.</p>
+      <p>Experiência construída em ambientes de mineração e em processos de reparação de grandes impactos socioambientais, aproximando organizações, comunidades, instituições e diferentes públicos por meio da comunicação, da escuta, do diálogo e da estruturação e gestão de canais de relacionamento. Atuação também voltada à produção e análise de indicadores, ao fortalecimento da governança e à geração de informações estratégicas que contribuam para a gestão dos negócios e o desenvolvimento dos territórios.</p>
     </div>
 
     <details class="experiencia-card fade-up">
       <summary class="experiencia-topo">
         <div>
-          <span class="experiencia-area">Relacionamento socioinstitucional · Desenvolvimento territorial</span>
-          <h3>Samarco Mineração</h3>
+          <h3>Saiba mais</h3>
         </div>
-        <span class="experiencia-numero">01</span>
         <span class="plus"><i data-lucide="plus"></i></span>
       </summary>
       <div class="experiencia-corpo">
+        <p>Samarco Mineração</p>
         <p>Atuação em estratégias de relacionamento socioinstitucional e diálogo social nos territórios de influência da mineração, integrando objetivos do negócio às necessidades e perspectivas das comunidades e dos municípios.</p>
         <p>Condução de processos de diálogo e articulação institucional para expansão de empreendimentos, incluindo o projeto P4P, referente à implantação de uma nova linha do mineroduto, envolvendo empresa, poder público, comunidades e demais partes interessadas.</p>
         <p>Desenvolvimento e acompanhamento de iniciativas de desenvolvimento territorial, incluindo Planos de Desenvolvimento Municipal (PDM), projetos de infraestrutura, voluntariado, patrocínios e investimentos sociais.</p>
         <p>Gestão de pautas de alta sensibilidade socioinstitucional, como CPIs, inquéritos civis e questões relacionadas a emissões, poeira e ruído, com interlocução junto ao Ministério Público e instituições públicas.</p>
         <p>Articulação transversal com áreas como Comunicação, Meio Ambiente, Engenharia e Tecnologia da Informação, integrando perspectivas técnicas, sociais e institucionais na construção de soluções.</p>
-        <div class="entregas">
-          <h4>Principais entregas</h4>
-          <ul>
-            <li>Estratégias de diálogo social e institucional para expansão de empreendimentos.</li>
-            <li>Relacionamento com prefeituras, órgãos públicos, Ministério Público, lideranças e instituições.</li>
-            <li>Desenvolvimento de Planos de Desenvolvimento Municipal em Guarapari e Anchieta (ES).</li>
-            <li>Gestão de mais de 100 iniciativas anuais de voluntariado, alcançando aproximadamente 20 mil beneficiários.</li>
-            <li>Gestão de investimentos sociais, patrocínios, doações e projetos de infraestrutura comunitária.</li>
-            <li>Articulação institucional e gestão de crises e riscos socioinstitucionais.</li>
-          </ul>
-        </div>
-      </div>
-    </details>
-
-    <details class="experiencia-card fade-up">
-      <summary class="experiencia-topo">
-        <div>
-          <span class="experiencia-area">Estruturação e gestão de canais de relacionamento · Diálogo social · Experiência do usuário</span>
-          <h3>Fundação Renova</h3>
-        </div>
-        <span class="experiencia-numero">02</span>
-        <span class="plus"><i data-lucide="plus"></i></span>
-      </summary>
-      <div class="experiencia-corpo">
+        <p>Fundação Renova</p>
         <p>Atuação na estruturação e gestão de estratégias e canais de relacionamento voltados ao acolhimento, à orientação e ao diálogo com pessoas atingidas pelo rompimento da barragem de Fundão.</p>
         <p>Liderança de três dos cinco pilares dos Canais de Relacionamento — 0800, Fale Conosco e Portal do Usuário — em uma operação de grande escala e complexidade, envolvendo estruturação de processos, formação de equipes, desenvolvimento de lideranças e gestão da qualidade e dos resultados.</p>
         <p>Condução de modelos de atendimento baseados em escuta ativa, acolhimento e clareza das informações, incorporando princípios de Comunicação Não Violenta e Escrita Afetuosa, inclusive no tratamento de demandas sensíveis e de públicos em situação de vulnerabilidade.</p>
@@ -773,6 +747,12 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
         <div class="entregas">
           <h4>Principais entregas e resultados</h4>
           <ul>
+            <li>Estratégias de diálogo social e institucional para expansão de empreendimentos.</li>
+            <li>Relacionamento com prefeituras, órgãos públicos, Ministério Público, lideranças e instituições.</li>
+            <li>Desenvolvimento de Planos de Desenvolvimento Municipal em Guarapari e Anchieta (ES).</li>
+            <li>Gestão de mais de 100 iniciativas anuais de voluntariado, alcançando aproximadamente 20 mil beneficiários.</li>
+            <li>Gestão de investimentos sociais, patrocínios, doações e projetos de infraestrutura comunitária.</li>
+            <li>Articulação institucional e gestão de crises e riscos socioinstitucionais.</li>
             <li>Estruturação, implantação e gestão de três canais estratégicos: 0800, Fale Conosco e Portal do Usuário.</li>
             <li>Formação e liderança de aproximadamente 300 profissionais, entre atendentes e gestores.</li>
             <li>Gestão de operação com mais de 1 milhão de contatos em aproximadamente três anos e meio.</li>
@@ -796,9 +776,9 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
       <h2>Consultorias e Palestras</h2>
     </div>
     <nav class="ofertas-nav fade-up" aria-label="Consultorias e palestras">
-      <a href="#oferta-conexa"><span>01</span>CONEXA</a>
+      <a href="#oferta-conexa"><span>01</span>Método CONEXA</a>
       <a href="#oferta-canais"><span>02</span>Canais de Relacionamento</a>
-      <a href="#oferta-inteligencia"><span>03</span>Inteligência em Relacionamento</a>
+      <a href="#oferta-inteligencia"><span>03</span>Inteligência e Desenvolvimento Metodológico</a>
       <a href="#oferta-palestras"><span>04</span>Palestras e Experiências</a>
     </nav>
     <div class="ofertas">
@@ -964,6 +944,7 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
       <div class="passo fade-up"><div class="passo-num">01</div><h3>Conversa inicial</h3><p>Você chama no WhatsApp e conta sobre o evento, o público e o desafio que quer trabalhar.</p></div>
       <div class="passo fade-up"><div class="passo-num">02</div><h3>Conteúdo ajustado</h3><p>Rafaela escolhe com você o tema e adapta exemplos, duração e formato à realidade da sua empresa.</p></div>
       <div class="passo fade-up"><div class="passo-num">03</div><h3>Palestra no seu evento</h3><p>Apresentação envolvente, presencial ou online, com espaço para perguntas e pontos práticos para aplicar.</p></div>
+      <div class="passo fade-up"><div class="passo-num">04</div><h3>Consultoria para o seu negócio</h3><p>Uma conversa para compreender o contexto, os desafios e as oportunidades do negócio. A partir dessa escuta, Rafaela estrutura uma proposta de consultoria alinhada às necessidades e aos objetivos identificados.</p></div>
     </div>
   </div>
 </section>
@@ -1041,7 +1022,7 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
       </details>
       <details>
         <summary>O que é o método CONEXA?<span class="plus"><i data-lucide="plus"></i></span></summary>
-        <p>É o método autoral que idealizei a partir da minha trajetória, baseado no potencial das conexões para gerar confiança, valor e oportunidades nos negócios. Ele orienta tanto as consultorias quanto as palestras, unindo sensibilidade humana, visão estratégica e capacidade de realização.</p>
+        <p>O CONEXA é um método autoral de consultoria que desenvolvi para ajudar pequenos negócios a enxergar o potencial das conexões que já acontecem no dia a dia com seus clientes. A partir de um olhar atento para as interações, especialmente nos primeiros pontos de contato, o método identifica oportunidades de melhoria, fidelização e crescimento, aproximando a percepção de quem está na linha de frente das decisões de quem conduz o negócio.</p>
       </details>
       <details>
         <summary>Os trabalhos podem ser presenciais ou online?<span class="plus"><i data-lucide="plus"></i></span></summary>
